@@ -1,5 +1,5 @@
 const UI = {
-  form: document.form['loginForm'],
+  form: document.forms['loginForm'],
   inputEmail: document.getElementById('email'),
   inpunPassword: document.getElementById('password'),
 }
