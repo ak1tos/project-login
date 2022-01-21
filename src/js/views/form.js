@@ -1,16 +1,16 @@
 /**
  * Function inputErrorTemplate
- * @param {string} msg 
+ * @param {String} msg
  */
 function inputErrorTemplate(msg) {
- return `
-   <div class="invalid-feedback">${msg}</div>
- `;
+  return `
+    <div class="invalid-feedback">${msg}</div>
+  `;
 }
 
 /**
  * Function showInputError. Add input error
- * @param {HTMLInputElement} el 
+ * @param {HTMLInputElement} el
  */
 export function showInputError(el) {
   const parent = el.parentElement;
@@ -21,13 +21,13 @@ export function showInputError(el) {
 }
 /**
  * Function removeInputError. Remove input error
- * @param {HTMLInputElement} el 
+ * @param {HTMLInputElement} el
  */
 export function removeInputError(el) {
   const parent = el.parentElement;
   const err = parent.querySelector('.invalid-feedback');
   if (!err) return;
-  
+
   el.classList.remove('is-invalid');
-  parent.replaceChild(err);
+  parent.removeChild(err);
 }
